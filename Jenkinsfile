@@ -18,7 +18,7 @@ node {
         }
 
         stage('Push') {
-            docker.withRegistry('https://ghcr.io', 'Token_Jenkins') {
+            docker.withRegistry('https://ghcr.io', 'Jenkins_token') {
                 img.push()
             }
         }
