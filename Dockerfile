@@ -1,3 +1,5 @@
 FROM nginx:latest
-RUN sed -i 's/nginx/omar/g' /usr/share/nginx/html/index.html
+
+RUN echo "<h1>Hello Omar - Docker + Jenkins</h1>" > /usr/share/nginx/html/index.html
+
 EXPOSE 80
