@@ -3,7 +3,7 @@ node{
     def IMAGE="{registryProjet}:version-${env.BUILD_ID}"
     
     stage('Clone'){
-        git branch: 'main', url: 'https://github.com/bitzroma/Jenkins'
+        git branch: 'main', url: 'https://github.com/bitzroma/jenkins-build-docker'
     }
     def img = stage('Build') {
         docker.build("$IMAGE", '.')
