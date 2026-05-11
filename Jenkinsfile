@@ -18,7 +18,7 @@ node {
         }
 
         stage('Push') {
-            docker.withRegistry('https://registry.gitlab.com', 'gitlab-token') {
+            docker.withRegistry('https://registry.gitlab.com', 'Mon_Token') {
                 img.push()
             }
         }
