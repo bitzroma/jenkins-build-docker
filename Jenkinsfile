@@ -1,6 +1,6 @@
 node {
 
-    def registryProjet = 'ghcr.io/bitzroma/jenkins-build-docker'
+    def registryProjet = 'registry.gitlab.com/bitzroma/jenkins-docker'
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
@@ -18,7 +18,7 @@ node {
         }
 
         stage('Push') {
-            docker.withRegistry('https://ghcr.io', "github-token") {
+            docker.withRegistry('https://registry.gitlab.com', 'gitlab-token') {
                 img.push()
             }
         }
