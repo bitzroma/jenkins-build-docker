@@ -8,7 +8,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("omar/nginx:1.0")
+        app = docker.build("bitzroma-nginx")
     }
 
     stage('Run image') {
