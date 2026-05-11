@@ -1,8 +1,4 @@
 node {
-    def app
-
-node {
-
     stage('Clone') {
         checkout scm
     }
